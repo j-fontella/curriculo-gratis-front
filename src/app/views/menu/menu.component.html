@@ -1,0 +1,44 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+          <img src="assets/images/banner.png">
+          <p id="msgErro"></p>
+        </div>
+
+        <div class="col-12">
+          <button
+            pButton
+            type="button"
+            label="Perfil"
+            class="col-12 mt-2 mb-2"
+            (click)="redirecionarPerfil()"
+          ></button>
+        </div>
+
+        <div class="col-12">
+          <button
+            pButton
+            type="button"
+            label="Imprimir curriculo"
+            class="col-12 mt-2 mb-2"
+            (click)="imprimirCurriculo()"
+          ></button>
+        </div>
+
+        <div class="col-12">
+          <button
+            pButton
+            type="button"
+            label="Imprimir curriculo personalizado"
+            class="col-12 mt-2 mb-2"
+            (click)="imprimirPersonalizado()"
+          ></button>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>
