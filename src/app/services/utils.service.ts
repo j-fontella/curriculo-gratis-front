@@ -170,4 +170,22 @@ export class UtilsService {
     return json;
   }
 
+  public getErrorMsgs(json:any, label : String) : string {
+    if(!this.isObject(json.error)){
+      return json.error ? json.error : `Erro ao registrar ${label}`;
+    }
+    let errors = json.erros;
+    let msg : string = "Contate o suporte";
+
+    if(Array.isArray(errors)){
+      msg = "";
+      errors.forEach((error : any) => {
+        msg += error + "<BR>"
+      })
+    }
+
+
+    return msg;
+  }
+
 }
